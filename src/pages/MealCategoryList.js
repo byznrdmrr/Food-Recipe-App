@@ -1,36 +1,36 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, FlatList} from 'react-native';
 import {CategoryCard} from '../components';
+import axios from 'axios';
 
 const url_path ='https://www.themealdb.com/api/json/v1/1/categories.php';
 
 function MealCategoryList(props) {
-    const [FoodData, setFoodData]= useState({});
+    const [CategoryList, setCategoryList]= useState({});
 
     async function fetchData(){
         const response = await axios.get(url_path);
-        console.log(response)
-        setFoodData(response.data);
+        //console.log(response);
+        setCategoryList(response.data);
     }
 
     useEffect(()=>{
         fetchData();
     }, [])
 
-    const renderFoodData =(({item})=>{
-        <CategoryCard 
-            categories={item}
-        />
-    })
+    const renderCategoryList = ({item}) => (
+        <CategoryCard categories={item} />
+    );
+    
     return(
-    <View>
+    <View style ={{backgroundColor: 'red'}}>
       <FlatList
-        data={FoodData}
-        keyExtractor={(item)=>item.id.toString()}
-        renderItem={renderFoodData}
+        data={CategoryList}
+        keyExtractor={(item)=>item.idCategory.toString()}
+        renderItem={renderCategoryList}
       />
+      <Text>deneme</Text>
     </View>
-
     );
 }
 export {MealCategoryList};
