@@ -3,6 +3,7 @@ import {View, Pressable, Text, Image} from 'react-native';
 import {card_item} from '../styles/components_style';
 
 function CategoryCard ({categories, onClick}) {
+    
     return(
         <Pressable 
             style ={card_item.container}

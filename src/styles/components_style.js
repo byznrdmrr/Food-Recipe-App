@@ -24,4 +24,29 @@ const card_item = StyleSheet.create({
         borderBottomRightRadius: 10,
     }
 })
-export {card_item};
+
+const filtered_card_item = StyleSheet.create({
+    container: {
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: '#bdbdbd',
+        margin: 5,
+        borderRadius: 10,
+        marginVertical: 8,
+    },
+    image:{
+        height:deviceSize.height / 4,
+    },
+    foodName: {
+        fontWeight: 'bold',
+        fontSize: 25,       
+    },
+    footer: {
+        backgroundColor: '#e0e0ea',
+        padding: 5,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+    }
+
+});
+export {card_item, filtered_card_item};
