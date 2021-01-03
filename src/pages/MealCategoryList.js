@@ -19,11 +19,14 @@ function MealCategoryList(props) {
     }, [])
 
     const renderCategoryList = ({item}) => (
-        <CategoryCard categories={item} />
+        <CategoryCard 
+            categories={item}
+            onClick={()=> props.navigation.navigate('FilteredCategory', {selectedData: item})}
+        />
     );
     
     return(
-    <View style ={{backgroundColor: 'red'}}>
+    <View>
       <FlatList
         data={CategoryList}
         keyExtractor={(item)=>item.idCategory.toString()}
