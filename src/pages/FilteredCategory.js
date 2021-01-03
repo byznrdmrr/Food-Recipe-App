@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from  'react';
 import {View, Text, ImageBackground} from 'react-native';
 import axios from 'axios';
-import {FilteredCategory } from "../styles/pages_style";
+import {FilteredCategoryCard } from "../components";
 
 
-const url_api = "https://www.themealdb.com/api/json/v1/1/filter.php"
+const url_api = 'https://www.themealdb.com/api/json/v1/1/filter.php'
 
 function FilteredCategory({route}) {
     const {category} = route.params;
@@ -24,7 +24,7 @@ function FilteredCategory({route}) {
     }, []);
 
     const renderFilteredCategoryList = ({item}) => (
-        <FilteredCategory  
+        <FilteredCategoryCard  
             filteredCategory={item}
             onClick = {() => useLinkProps.navigation.navigate('MealDetails', {id: item.idMeal})}
         />    

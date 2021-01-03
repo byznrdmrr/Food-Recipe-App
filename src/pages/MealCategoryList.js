@@ -33,7 +33,6 @@ function MealCategoryList(props) {
         keyExtractor={(item)=>item.idCategory.toString()}
         renderItem={renderCategoryList}
       />
-      <Text>deneme</Text>
     </View>
     );
 }

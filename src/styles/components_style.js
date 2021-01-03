@@ -49,4 +49,7 @@ const filtered_card_item = StyleSheet.create({
     }
 
 });
-export {card_item, filtered_card_item};
+const meal_details = StyleSheet.create({
+
+})
+export {card_item, filtered_card_item, meal_details};
