@@ -1,3 +1,3 @@
-export * from './MealCategoryList';
-export * from './FilteredCategory';
-export * from './MealDetails';
+export * from './categories/Categories';
+export * from './meals/Meals';
+export * from './detail/Detail';

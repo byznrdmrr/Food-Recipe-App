@@ -1,24 +1,29 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {MealCategoryList, FilteredCategory, MealDetails} from './pages';
+
+import {Detail, Categories, Meals} from './pages';
+import { CategoryHeader } from './pages/categories/components';
 
 const Stack = createStackNavigator();
 
 function App() {
-    return(
+  return (
     <NavigationContainer>
-       <Stack.Navigator 
-          screenOptions={{
-            headerShown: false,
-          }}
-          >
-           <Stack.Screen name="MealCategoryList" component={MealCategoryList} />    
-           <Stack.Screen name="FilteredCategory" component= {FilteredCategory}/>  
-           <Stack.Screen name="MealDetails" component= {MealDetails}/> 
-       </Stack.Navigator>
+      <Stack.Navigator
+      screenOptions={{
+        headerBackground: () => (
+          <CategoryHeader />
+        ),
+        headerTintColor: 'white'
+      }}
+      >
+        <Stack.Screen name="Categories" component={Categories} />
+        <Stack.Screen name="Meals" component={Meals} />
+        <Stack.Screen name="Detail" component={Detail} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
-    
 }
+
 export default App;
