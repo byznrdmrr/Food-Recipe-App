@@ -1,7 +1,7 @@
 # Food-Recipe-App
 
-<img src="screenshots/category_page.png" witdh="50" height="50" />
-![](screenshots/category_page.png)
-![](screenshots/meal_page.png)
-![](screenshots/detail_page.png)
-![](screenshots/youtube_page.png)
+<View style={{flexDirection: 'row'}>
+<img src="screenshots/category_page.png" witdh="700" height="700" />
+<img src="screenshots/meal_page.png" witdh="700" height="700" />
+</View>
+
